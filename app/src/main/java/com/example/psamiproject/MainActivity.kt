@@ -13,14 +13,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val Tekst = findViewById(R.id.tekst) as TextView
         val Zaloguj = findViewById<Button>(R.id.button_zaloguj)
-        val Ble = findViewById<Button>(R.id.button_ble)
+        val ButtonBle = findViewById<Button>(R.id.button_ble)
         Zaloguj.setOnClickListener {
             Tekst.setText("Zaloguj")
             val intent = Intent(this, LogIn::class.java)
             startActivity(intent)
         }
 
-        Ble.setOnClickListener {
+        ButtonBle.setOnClickListener {
             val intent = Intent(this, Ble::class.java)
             startActivity(intent)
         }
