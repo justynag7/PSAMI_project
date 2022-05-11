@@ -30,10 +30,18 @@ class Ble : AppCompatActivity() {
     private lateinit var accelerometerTextView : TextView
     private lateinit var gyroscopeTextView: TextView
 
+    private lateinit var connectedGatt: BluetoothGatt
+
     private var isScanning = false
         set(value) {
             field = value
             runOnUiThread { findViewById<Button>(R.id.scan_button).text = if (value) "Zatrzymaj skanowanie" else "Rozpocznij skanowanie" }
+        }
+
+    private var isConnected = false
+        set(value) {
+            field = value
+            runOnUiThread { findViewById<Button>(R.id.connect_button).text = if (value) "Rozłącz" else "Połącz" }
         }
 
     private val scanResults = mutableListOf<ScanResult>()
@@ -57,9 +65,16 @@ class Ble : AppCompatActivity() {
     }
 
     private fun connectClick() {
-        val dev = scanResults.elementAt(0).device
-
-        dev.connectGatt(this, false, bluetoothCallback)
+        if(isConnected)
+        {
+            connectedGatt.disconnect()
+            isConnected = false
+        }
+        else
+        {
+            scanResults.elementAt(0).device.connectGatt(this, false, bluetoothCallback)
+            isConnected = true
+        }
     }
 
     private fun scanClick() {
@@ -122,6 +137,10 @@ class Ble : AppCompatActivity() {
     private val bluetoothCallback: BluetoothGattCallback = object : BluetoothGattCallback() {
         override fun onConnectionStateChange(gatt: BluetoothGatt?, status: Int, newState: Int) {
             val deviceAddress = gatt?.device?.address
+
+            if (gatt != null) {
+                connectedGatt = gatt
+            }
 
             if (status == BluetoothGatt.GATT_SUCCESS) {
                 if (newState == BluetoothProfile.STATE_CONNECTED) {
