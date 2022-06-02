@@ -10,13 +10,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"/>
+
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Zarejestruj się"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
-         />
+        android:textSize="30sp" />
 
 </RelativeLayout>
