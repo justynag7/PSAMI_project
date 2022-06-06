@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "557834777803",
+    "project_id": "psamiproject-12c02",
+    "storage_bucket": "psamiproject-12c02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557834777803:android:10dd2483204412e136574e",
+        "android_client_info": {
+          "package_name": "com.example.psamiproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557834777803-jatomh5v7hcs1ofv8jebufun89i9phor.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.psamiproject",
+            "certificate_hash": "e7a5101ef3733f98b784746a8798ee286a76180b"
+          }
+        },
+        {
+          "client_id": "557834777803-5lemrnbs5tipv36rrejpcfq80l4aid4j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAW7W_Y0vYggqMet8i9vP5QR7E-Y4bMxtA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "557834777803-5lemrnbs5tipv36rrejpcfq80l4aid4j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
