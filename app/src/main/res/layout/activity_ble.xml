@@ -30,7 +30,7 @@
         android:id="@+id/accelerometer_textView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="12"
+        android:layout_weight="18"
         android:textSize="30sp"
         android:text="Akcelerometr:\n 0.00 0.00 0.00" />
 
@@ -38,7 +38,23 @@
         android:id="@+id/gyroscope_textView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="12"
+        android:layout_weight="18"
+        android:textSize="30sp"
+        android:text="Żyroskop:\n 0.00 0.00 0.00" />
+
+    <TextView
+        android:id="@+id/accelerometer2_textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18"
+        android:textSize="30sp"
+        android:text="Akcelerometr:\n 0.00 0.00 0.00" />
+
+    <TextView
+        android:id="@+id/gyroscope2_textView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="18"
         android:textSize="30sp"
         android:text="Żyroskop:\n 0.00 0.00 0.00" />
 </LinearLayout>
